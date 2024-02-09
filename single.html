@@ -30,6 +30,8 @@
 
   <link rel="stylesheet" href="css/flatpickr.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
   <title>ConcreteFeeds</title>
 </head>
@@ -125,7 +127,7 @@
 
         <div class="col-md-12 col-lg-8 main-content">
 
-          <div class="post-content-body">
+          <div class="post-content-body" id="markdown_content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nam quas inventore, ut iure iste modi eos adipisci ad ea itaque labore earum autem nobis et numquam, minima eius. Nam eius, non unde ut aut sunt eveniet rerum repellendus porro.</p>
             <p>Sint ab voluptates itaque, ipsum porro qui obcaecati cumque quas sit vel. Voluptatum provident id quis quo. Eveniet maiores perferendis officia veniam est laborum, expedita fuga doloribus natus repellendus dolorem ab similique sint eius cupiditate necessitatibus, magni nesciunt ex eos.</p>
             <p>Quis eius aspernatur, eaque culpa cumque reiciendis, nobis at earum assumenda similique ut? Aperiam vel aut, ex exercitationem eos consequuntur eaque culpa totam, deserunt, aspernatur quae eveniet hic provident ullam tempora error repudiandae sapiente illum rerum itaque voluptatem. Commodi, sequi.</p>
@@ -154,7 +156,7 @@
           </div>
 
 
-          <div class="pt-5 comment-wrap">
+          <!-- <div class="pt-5 comment-wrap">
             <h3 class="mb-5 heading">6 Comments</h3>
             <ul class="comment-list">
               <li class="comment">
@@ -236,7 +238,6 @@
                 </div>
               </li>
             </ul>
-            <!-- END comment-list -->
 
             <div class="comment-form-wrap pt-5">
               <h3 class="mb-5">Leave a comment</h3>
@@ -264,7 +265,7 @@
 
               </form>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -496,6 +497,29 @@
       </div>
     </div>
 
+
+    <script>
+      // Function to load and display Markdown content
+      function loadMarkdown() {
+          // Create a new instance of Showdown converter
+          var converter = new showdown.Converter();
+
+          // Fetch the Markdown file
+          fetch('markdowns/TEST.md')
+              .then(response => response.text())
+              .then(markdownText => {
+                  // Convert Markdown to HTML
+                  var html = converter.makeHtml(markdownText);
+
+                  // Set the HTML content to the specified div
+                  document.getElementById('markdown_content').innerHTML = html;
+              })
+              .catch(error => console.error('Error fetching Markdown file:', error));
+      }
+
+      // Call the function to load Markdown when the page is loaded
+      window.onload = loadMarkdown;
+    </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>

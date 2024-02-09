@@ -1,0 +1,39 @@
+{
+    "TopBlogs": [
+        {
+            "id": 1,
+            "imageUrl": "https://source.unsplash.com/1600x900/?fashion",
+            "title": "The Art of Accessorizing: Making a Statement",
+            "datePosted": "2023-12-31",
+            "description": "AI can now kill those annoying cookie pop-ups"
+        },
+        {
+            "id": 2,
+            "imageUrl": "https://source.unsplash.com/1600x900/?interior-design",
+            "title": "Maximizing Small Spaces: Tips and Tricks",
+            "datePosted": "2024-01-05",
+            "description": "Don’t assume your user data in the cloud is safe"
+        },
+        {
+            "id": 3,
+            "imageUrl": "https://source.unsplash.com/1600x900/?travel",
+            "title": "Exploring the Great Outdoors: National Parks",
+            "datePosted": "2024-01-10",
+            "description": "Why is my internet so slow?"
+        },
+        {
+            "id": 4,
+            "imageUrl": "https://source.unsplash.com/1600x900/?food",
+            "title": "Culinary Adventures Around the World",
+            "datePosted": "2024-01-22",
+            "description": "Startup vs corporate: What job suits you best?"
+        },
+        {
+            "id": 5,
+            "imageUrl": "https://source.unsplash.com/1600x900/?fitness",
+            "title": "Fitness and Well-being: A Holistic Approach",
+            "datePosted": "2024-01-21",
+            "description":"Thought you loved Python? Wait until you meet Rust"
+        }
+    ]
+}

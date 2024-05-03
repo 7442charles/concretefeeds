@@ -1,0 +1,87 @@
+body {
+  background-color: #14161a;
+  color: #ffffff;
+}
+
+.sidebar {
+  background-color: #14161a;
+  border-right: 1px solid #333;
+  height: 100vh;
+}
+
+.list-group-item {
+  background-color: #14161a;
+  border: none;
+  transition: font-size 0.3s ease, background-color 0.3s ease; 
+  /* justify-content: space-between; */
+}
+
+.list-group-item:hover {
+  font-size: 1.1rem; /* Increase font size on hover */
+  background-color: #1d1f23; /* Lighter version of background color on hover */
+}
+
+.sidebar-header {
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.add-post,.more-info {
+  float: right;
+  color: #fff;
+}
+
+.add-post {
+  background-color: #14161a;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px; /* Add spacing between the icon and the + sign */
+  cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+}
+
+.add-post:hover {
+  background-color: #1d1f23; /* Lighter background color on hover */
+}
+
+
+.list-group-item:focus,
+.list-group-item:active {
+  background-color: #14161a;
+}
+
+.list-group {
+  background-color: #14161a;
+  height: 50vh; /* Adjust height to occupy 60% of viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* RECENT BLOGS SECTION */
+/* Custom CSS for table styling */
+.custom-table {
+  background-color: #14161a;
+  border-radius: 20px;
+}
+
+.custom-table th,
+.custom-table td {
+  color: #fff;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.view-all a {
+  color: #fff;
+}
+
+.view-all a:hover {
+  color: #fff;
+}
+

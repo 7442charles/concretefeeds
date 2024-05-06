@@ -1,676 +1,350 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="ConcreteFeeds">
-  <meta name="monetag" content="9300dc2953571a960b6698b8bdeb96bf">
-  <meta name="description" content="Concrete Feeds - A blog covering celebrities, politics, and world happenings. Stay updated on the latest news and trends.">
-  <meta name="keywords" content="Concrete Feeds, blog, celebrities, politics, world happenings, news, trends">
-	<!-- Open Graph meta tags for social sharing -->
-	<meta property="og:title" content="Concrete Feeds">
-	<meta property="og:description" content="Stay updated on the latest news and trends in celebrities, politics, and world happenings with Concrete Feeds.">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://www.concretefeeds.com">
-	<meta property="og:image" content="https://raw.githubusercontent.com/7442charles/concretefeeds/main/favicon.jpg">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<!-- Twitter Card meta tags for Twitter sharing -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@YourTwitterHandle">
-	<meta name="twitter:title" content="Concrete Feeds">
-	<meta name="twitter:description" content="Stay updated on the latest news and trends in celebrities, politics, and world happenings with Concrete Feeds.">
-	<meta name="twitter:image" content="https://raw.githubusercontent.com/7442charles/concretefeeds/main/favicon.jpg">
+  <title>Factual Ideas</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-  <link rel="shortcut icon" href="favicon.jpg">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <!-- <link rel="manifest" href="/site.webmanifest"> -->
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="bootstrap, bootstrap5" />
-
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <!-- Template Main CSS Files -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-  <link rel="stylesheet" href="css/tiny-slider.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/glightbox.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="css/flatpickr.min.css">
-
-
-  <title>ConcreteFeeds</title>
 </head>
+
 <body>
 
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-	<nav class="site-nav">
-		<div class="container">
-			<div class="menu-bg-wrap">
-				<div class="site-navigation">
-					<div class="row g-0 align-items-center">
-						<div class="col-2">
-							<a href="index.html" class="logo m-0 float-start">ConcreteFeeds<span class="text-primary">.</span></a>
-						</div>
-						<div class="col-8 text-center">
-							<form action="#" class="search-form d-inline-block d-lg-none">
-								<input type="text" class="form-control" placeholder="Search...">
-								<span class="bi-search"></span>
-							</form>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Factual Ideas</h1>
+      </a>
 
-							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-								<li class="active"><a href="index.html">Home</a></li>
-								<!-- <li class="has-children">
-									<a href="category.html">Pages</a>
-									<ul class="dropdown">
-										<li><a href="search-result.html">Search Result</a></li>
-										<li><a href="blog.html">Blog</a></li>
-										<li><a href="single.html">Blog Single</a></li>
-										<li><a href="category.html">Category</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="contact.html">Contact Us</a></li>
-										<li><a href="#">Menu One</a></li>
-										<li><a href="#">Menu Two</a></li>
-									</ul>
-								</li> -->
-								<li><a href="category.html">Culture</a></li>
-								<li><a href="category.html">Business</a></li>
-								<li><a href="category.html">Politics</a></li>
-							</ul>
-						</div>
-						<div class="col-2 text-end">
-							<a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
-								<span></span>
-							</a>
-							<form action="#" class="search-form d-none d-lg-inline-block">
-								<input type="text" class="form-control" placeholder="Search...">
-								<span class="bi-search"></span>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="single-post.html">Single Post</a></li> -->
+          <li><a href="about.html">About</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+      </nav><!-- .navbar -->
 
-	<!-- Start retroy layout blog posts -->
-	<section class="section bg-light">
-		<div class="container">
-			<div id="blogContainer" class="row align-items-stretch retro-layout">
-				<div class="col-md-4" id="part_one_blog">
-					<a href="single.html" class="h-entry mb-30 v-height gradient">
+      <div class="position-relative">
+        <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
+        <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
+        <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
 
-						<div class="featured-img" style="background-image: url('images/img_2_horizontal.jpg');"></div>
+        <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
+        <i class="bi bi-list mobile-nav-toggle"></i>
 
-						<div class="text">
-							<span class="date">Jan. 14th, 2024</span>
-							<h2>AI can now kill those annoying cookie pop-ups</h2>
-						</div>
-					</a>
-					<a href="single.html" class="h-entry v-height gradient">
+        <!-- ======= Search Form ======= -->
+        <div class="search-form-wrap js-search-form-wrap">
+          <form action="search-result.html" class="search-form">
+            <span class="icon bi-search"></span>
+            <input type="text" placeholder="Search" class="form-control">
+            <button class="btn js-search-close"><span class="bi-x"></span></button>
+          </form>
+        </div><!-- End Search Form -->
 
-						<div class="featured-img" style="background-image: url('images/img_5_horizontal.jpg');"></div>
+      </div>
 
-						<div class="text">
-							<span class="date">Jan. 14th, 2024</span>
-							<h2>Don’t assume your user data in the cloud is safe</h2>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4" id="center_blog">
-					<a href="single.html" class="h-entry img-5 h-100 gradient">
-
-						<div class="featured-img" style="background-image: url('images/img_1_vertical.jpg');"></div>
-
-						<div class="text">
-							<span class="date">Jan. 14th, 2024</span>
-							<h2>Why is my internet so slow?</h2>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4" id="part_two_blog">
-					<a href="single.html" class="h-entry mb-30 v-height gradient">
-
-						<div class="featured-img" style="background-image: url('images/img_3_horizontal.jpg');"></div>
-
-						<div class="text">
-							<span class="date">Jan. 14th, 2024</span>
-							<h2>Startup vs corporate: What job suits you best?</h2>
-						</div>
-					</a>
-					<a href="single.html" class="h-entry v-height gradient">
-
-						<div class="featured-img" style="background-image: url('images/img_4_horizontal.jpg');"></div>
-
-						<div class="text">
-							<span class="date">Jan. 14th, 2024</span>
-							<h2>Thought you loved Python? Wait until you meet Rust</h2>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End retroy layout blog posts -->
-
-	<!-- Start posts-entry -->
-	<section class="section posts-entry">
-		<div class="container">
-			<div class="row mb-4">
-				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Business</h2>
-				</div>
-				<div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
-			</div>
-			<div class="row g-3">
-				<div class="col-md-9">
-					<div class="row g-3">
-						<div class="col-md-6">
-							<div class="blog-entry">
-								<a href="single.html" class="img-link">
-									<img src="images/img_1_sq.jpg" alt="Image" class="img-fluid">
-								</a>
-								<span class="date">Jan. 14th, 2024</span>
-								<h2><a href="single.html">Thought you loved Python? Wait until you meet Rust</a></h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-								<p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="blog-entry">
-								<a href="single.html" class="img-link">
-									<img src="images/img_2_sq.jpg" alt="Image" class="img-fluid">
-								</a>
-								<span class="date">Jan. 14th, 2024</span>
-								<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-								<p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<ul class="list-unstyled blog-entry-sm">
-						<li>
-							<span class="date">Jan. 14th, 2024</span>
-							<h3><a href="single.html">Don’t assume your user data in the cloud is safe</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Jan. 14th, 2024</span>
-							<h3><a href="single.html">Meta unveils fees on metaverse sales</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Jan. 14th, 2024</span>
-							<h3><a href="single.html">UK sees highest inflation in 30 years</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End posts-entry -->
-
-	<!-- Start posts-entry -->
-	<section class="section posts-entry posts-entry-sm bg-light">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-lg-3">
-					<div class="blog-entry">
-						<a href="single.html" class="img-link">
-							<img src="images/img_1_horizontal.jpg" alt="Image" class="img-fluid">
-						</a>
-						<span class="date">Jan. 14th, 2024</span>
-						<h2><a href="single.html">Thought you loved Python? Wait until you meet Rust</a></h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p><a href="#" class="read-more">Continue Reading</a></p>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="blog-entry">
-						<a href="single.html" class="img-link">
-							<img src="images/img_2_horizontal.jpg" alt="Image" class="img-fluid">
-						</a>
-						<span class="date">Jan. 14th, 2024</span>
-						<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p><a href="#" class="read-more">Continue Reading</a></p>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="blog-entry">
-						<a href="single.html" class="img-link">
-							<img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid">
-						</a>
-						<span class="date">Jan. 14th, 2024</span>
-						<h2><a href="single.html">UK sees highest inflation in 30 years</a></h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p><a href="#" class="read-more">Continue Reading</a></p>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="blog-entry">
-						<a href="single.html" class="img-link">
-							<img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid">
-						</a>
-						<span class="date">Jan. 14th, 2024</span>
-						<h2><a href="single.html">Don’t assume your user data in the cloud is safe</a></h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p><a href="#" class="read-more">Continue Reading</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End posts-entry -->
-
-	<!-- Start posts-entry -->
-	<section class="section posts-entry">
-		<div class="container">
-			<div class="row mb-4">
-				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Culture</h2>
-				</div>
-				<div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
-			</div>
-			<div class="row g-3">
-				<div class="col-md-9 order-md-2">
-					<div class="row g-3">
-						<div class="col-md-6">
-							<div class="blog-entry">
-								<a href="single.html" class="img-link">
-									<img src="images/img_1_sq.jpg" alt="Image" class="img-fluid">
-								</a>
-								<span class="date">Jan. 14th, 2024</span>
-								<h2><a href="single.html">Thought you loved Python? Wait until you meet Rust</a></h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-								<p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="blog-entry">
-								<a href="single.html" class="img-link">
-									<img src="images/img_2_sq.jpg" alt="Image" class="img-fluid">
-								</a>
-								<span class="date">Jan. 14th, 2024</span>
-								<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-								<p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<ul class="list-unstyled blog-entry-sm">
-						<li>
-							<span class="date">Jan. 14th, 2024</span>
-							<h3><a href="single.html">Don’t assume your user data in the cloud is safe</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Jan. 14th, 2024</span>
-							<h3><a href="single.html">Meta unveils fees on metaverse sales</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-
-						<li>
-							<span class="date">Jan. 14th, 2024</span>
-							<h3><a href="single.html">UK sees highest inflation in 30 years</a></h3>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- <section class="section">
-		<div class="container">
-
-			<div class="row mb-4">
-				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Politics</h2>
-				</div>
-				<div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_7_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_6_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_5_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_5.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_2_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_1_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_4_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="post-entry-alt">
-						<a href="single.html" class="img-link"><img src="images/img_3_horizontal.jpg" alt="Image" class="img-fluid"></a>
-						<div class="excerpt">
-							
-							
-
-							<h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-							<div class="post-meta align-items-center text-left clearfix">
-								<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_5.jpg" alt="Image" class="img-fluid"></figure>
-								<span class="d-inline-block mt-1">By <a href="#">David Anderson</a></span>
-								<span>&nbsp;-&nbsp; July 19, 2019</span>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sunt tempora dolor laudantium sed optio, explicabo ad deleniti impedit facilis fugit recusandae! Illo, aliquid, dicta beatae quia porro id est.</p>
-							<p><a href="#" class="read-more">Continue Reading</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</section> -->
-
-	<!-- <div class="section bg-light">
-		<div class="container">
-
-			<div class="row mb-4">
-				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Travel</h2>
-				</div>
-				<div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
-			</div>
-
-			<div class="row align-items-stretch retro-layout-alt">
-
-				<div class="col-md-5 order-md-2">
-					<a href="single.html" class="hentry img-1 h-100 gradient">
-						<div class="featured-img" style="background-image: url('images/img_2_vertical.jpg');"></div>
-						<div class="text">
-							<span>February 12, 2019</span>
-							<h2>Meta unveils fees on metaverse sales</h2>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-md-7">
-
-					<a href="single.html" class="hentry img-2 v-height mb30 gradient">
-						<div class="featured-img" style="background-image: url('images/img_1_horizontal.jpg');"></div>
-						<div class="text text-sm">
-							<span>February 12, 2019</span>
-							<h2>AI can now kill those annoying cookie pop-ups</h2>
-						</div>
-					</a>
-
-					<div class="two-col d-block d-md-flex justify-content-between">
-						<a href="single.html" class="hentry v-height img-2 gradient">
-							<div class="featured-img" style="background-image: url('images/img_2_sq.jpg');"></div>
-							<div class="text text-sm">
-								<span>February 12, 2019</span>
-								<h2>Don’t assume your user data in the cloud is safe</h2>
-							</div>
-						</a>
-						<a href="single.html" class="hentry v-height img-2 ms-auto float-end gradient">
-							<div class="featured-img" style="background-image: url('images/img_3_sq.jpg');"></div>
-							<div class="text text-sm">
-								<span>February 12, 2019</span>
-								<h2>Startup vs corporate: What job suits you best?</h2>
-							</div>
-						</a>
-					</div>  
-
-				</div>
-			</div>
-
-		</div>
-	</div> -->
-
-
-	<footer class="site-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3 class="mb-4">About</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div> <!-- /.widget -->
-					<div class="widget">
-						<h3>Social</h3>
-						<ul class="list-unstyled social">
-							<li><a href="#"><span class="icon-instagram"></span></a></li>
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
-							<li><a href="#"><span class="icon-linkedin"></span></a></li>
-							<li><a href="#"><span class="icon-pinterest"></span></a></li>
-							<li><a href="#"><span class="icon-dribbble"></span></a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-4 -->
-				<div class="col-lg-4 ps-lg-5">
-					<div class="widget">
-						<h3 class="mb-4">Company</h3>
-						<ul class="list-unstyled float-start links">
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Vision</a></li>
-							<li><a href="#">Mission</a></li>
-							<li><a href="#">Terms</a></li>
-							<li><a href="#">Privacy</a></li>
-						</ul>
-						<ul class="list-unstyled float-start links">
-							<li><a href="#">Partners</a></li>
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">Creative</a></li>
-						</ul>
-					</div> 
-				</div> 
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3>Join Newsletter</h3>
-						<form action="/subscribe" method="post">
-							<div class="mb-3">
-								<label for="email" class="form-label">Email address</label>
-								<input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
-							</div>
-							<button type="submit" class="btn btn-primary social-button" style="background-color: white; color: #306EE8;">Subscribe</button>
-						</form>
-					</div>
-				</div>
-				
-				
-			</div> 
-		</div>
-	</footer>
-	
-
-    <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-    	<div class="spinner-border text-primary" role="status">
-    		<span class="visually-hidden">Loading...</span>
-    	</div>
     </div>
 
+  </header><!-- End Header -->
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
+  <main id="main">
 
-    <script src="js/flatpickr.min.js"></script>
+    <!-- ======= Hero Slider Section ======= -->
+    <section id="hero-slider" class="hero-slider">
+      <div class="container-md" data-aos="fade-in">
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper sliderFeaturedPosts">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('assets/img/post-slide-1.jpg');">
+                    <div class="img-bg-inner">
+                      <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
+                    </div>
+                  </a>
+                </div>
 
-	<script src="js/main.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/glightbox.min.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
+                <div class="swiper-slide">
+                  <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('assets/img/post-slide-2.jpg');">
+                    <div class="img-bg-inner">
+                      <h2>17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('assets/img/post-slide-3.jpg');">
+                    <div class="img-bg-inner">
+                      <h2>13 Amazing Poems from Shel Silverstein with Valuable Life Lessons</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('assets/img/post-slide-4.jpg');">
+                    <div class="img-bg-inner">
+                      <h2>9 Half-up/half-down Hairstyles for Long and Medium Hair</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="custom-swiper-button-next">
+                <span class="bi-chevron-right"></span>
+              </div>
+              <div class="custom-swiper-button-prev">
+                <span class="bi-chevron-left"></span>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero Slider Section -->
+
+    <!-- ======= Post Grid Section ======= -->
+    <section id="posts" class="posts">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="post-entry-1 lg">
+              <a href="single-post.html"><img src="assets/img/post-landscape-1.jpg" alt="" class="img-fluid"></a>
+              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+              <h2><a href="single-post.html">11 Work From Home Part-Time Jobs You Can Do Now</a></h2>
+              <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p>
+
+              <div class="d-flex align-items-center author">
+                <div class="photo"><img src="assets/img/person-1.jpg" alt="" class="img-fluid"></div>
+                <div class="name">
+                  <h3 class="m-0 p-0">Cameron Williamson</h3>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row g-5">
+              <div class="col-lg-4 border-start custom-border">
+                <div class="post-entry-1">
+                  <a href="single-post.html"><img src="assets/img/post-landscape-2.jpg" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="date">Sport</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                  <h2><a href="single-post.html">Let’s Get Back to Work, New York</a></h2>
+                </div>
+                <div class="post-entry-1">
+                  <a href="single-post.html"><img src="assets/img/post-landscape-5.jpg" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="date">Food</span> <span class="mx-1">&bullet;</span> <span>Jul 17th '22</span></div>
+                  <h2><a href="single-post.html">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
+                </div>
+                <div class="post-entry-1">
+                  <a href="single-post.html"><img src="assets/img/post-landscape-7.jpg" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="date">Design</span> <span class="mx-1">&bullet;</span> <span>Mar 15th '22</span></div>
+                  <h2><a href="single-post.html">Why Craigslist Tampa Is One of The Most Interesting Places On the Web?</a></h2>
+                </div>
+              </div>
+              <div class="col-lg-4 border-start custom-border">
+                <div class="post-entry-1">
+                  <a href="single-post.html"><img src="assets/img/post-landscape-3.jpg" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                  <h2><a href="single-post.html">6 Easy Steps To Create Your Own Cute Merch For Instagram</a></h2>
+                </div>
+                <div class="post-entry-1">
+                  <a href="single-post.html"><img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="date">Tech</span> <span class="mx-1">&bullet;</span> <span>Mar 1st '22</span></div>
+                  <h2><a href="single-post.html">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
+                </div>
+                <div class="post-entry-1">
+                  <a href="single-post.html"><img src="assets/img/post-landscape-8.jpg" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="date">Travel</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                  <h2><a href="single-post.html">5 Great Startup Tips for Female Founders</a></h2>
+                </div>
+              </div>
+
+              <!-- Trending Section -->
+              <div class="col-lg-4">
+
+                <div class="trending">
+                  <h3>Trending</h3>
+                  <ul class="trending-post">
+                    <li>
+                      <a href="single-post.html">
+                        <span class="number">1</span>
+                        <h3>The Best Homemade Masks for Face (keep the Pimples Away)</h3>
+                        <span class="author">Jane Cooper</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="single-post.html">
+                        <span class="number">2</span>
+                        <h3>17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</h3>
+                        <span class="author">Wade Warren</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="single-post.html">
+                        <span class="number">3</span>
+                        <h3>13 Amazing Poems from Shel Silverstein with Valuable Life Lessons</h3>
+                        <span class="author">Esther Howard</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="single-post.html">
+                        <span class="number">4</span>
+                        <h3>9 Half-up/half-down Hairstyles for Long and Medium Hair</h3>
+                        <span class="author">Cameron Williamson</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="single-post.html">
+                        <span class="number">5</span>
+                        <h3>Life Insurance And Pregnancy: A Working Mom’s Guide</h3>
+                        <span class="author">Jenny Wilson</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div> <!-- End Trending Section -->
+            </div>
+          </div>
+
+        </div> <!-- End .row -->
+      </div>
+    </section> <!-- End Post Grid Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content">
+      <div class="container">
+
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <h3 class="footer-heading">About Factual Ideas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ab, perspiciatis beatae autem deleniti voluptate nulla a dolores, exercitationem eveniet libero laudantium recusandae officiis qui aliquid blanditiis omnis quae. Explicabo?</p>
+            <p><a href="about.html" class="footer-link-more">Learn More</a></p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="footer-heading">Navigation</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+              <li><a href="index.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+              <!-- <li><a href="category.html"><i class="bi bi-chevron-right"></i> Categories</a></li>
+              <li><a href="single-post.html"><i class="bi bi-chevron-right"></i> Single Post</a></li> -->
+             
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="footer-heading">Categories</h3>
+            <ul class="footer-links list-unstyled">
+              <li><a href="category.html"><i class="bi bi-chevron-right"></i> Business</a></li>
+              <li><a href="category.html"><i class="bi bi-chevron-right"></i> Culture</a></li>
+            
+
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <h3 class="footer-heading">Recent Posts</h3>
+
+            <ul class="footer-links footer-blog-entry list-unstyled">
+              <li>
+                <a href="single-post.html" class="d-flex align-items-center">
+                  <img src="assets/img/post-sq-1.jpg" alt="" class="img-fluid me-3">
+                  <div>
+                    <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <span>5 Great Startup Tips for Female Founders</span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="single-post.html" class="d-flex align-items-center">
+                  <img src="assets/img/post-sq-2.jpg" alt="" class="img-fluid me-3">
+                  <div>
+                    <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <span>What is the son of Football Coach John Gruden, Deuce Gruden doing Now?</span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="single-post.html" class="d-flex align-items-center">
+                  <img src="assets/img/post-sq-3.jpg" alt="" class="img-fluid me-3">
+                  <div>
+                    <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <span>Life Insurance And Pregnancy: A Working Mom’s Guide</span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="single-post.html" class="d-flex align-items-center">
+                  <img src="assets/img/post-sq-4.jpg" alt="" class="img-fluid me-3">
+                  <div>
+                    <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <span>How to Avoid Distraction and Stay Focused During Video Calls?</span>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
     
-  </body>
-  </html>
+
+  </footer>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factual Ideas - Admin Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-md-3 sidebar">
+        <!-- Sidebar -->
+        <div class="list-group">
+          <div class="sidebar-header">
+            Factual Ideas
+          </div>
+          <a href="dashboard.html" class="list-group-item list-group-item-action"> <i class="bi bi-house"></i> &nbsp; Dashboard  </a>
+          <a href="#" class="list-group-item list-group-item-action "> <i class="bi bi-browser-chrome"></i> &nbsp; View Site  </a>
+          <a href="posts.html" class="list-group-item list-group-item-action active"><i class="bi bi-pencil-square"></i> &nbsp; Posts <span class="add-post" id="add-post">+</span></a>
+          <a href="#" class="list-group-item list-group-item-action">Published</a>
+          <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-people"></i>&nbsp;Members <span class="more-info">10</span></a></a>
+          <a href="#" class="list-group-item list-group-item-action" onclick="logout()"> <i class="bi bi-box-arrow-right"></i>&nbsp;Logout</a>
+        </div>
+      </div>
+      
+      <div class="col-md-9">
+        <!-- Main Content -->
+        <h2>Posts</h2>
+
+        <!-- Filter Dropdown and New Post Button -->
+        <div class="d-flex justify-content-end align-items-center mb-3">
+            <div class="dropdown mr-3">
+                <button class="btn btn-link dropdown-toggle text-decoration-none" type="button" id="dropdownMenuButton1"  data-bs-toggle="dropdown" aria-expanded="false">
+                    filter By
+                </button>
+                <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item text-success" href="#">Most Viewed</a></li>
+                    <li><a class="dropdown-item text-success" href="#">Newest First</a></li>
+                    <li><a class="dropdown-item text-success" href="#">Oldest First</a></li>
+                    <li><a class="dropdown-item text-success" href="#">All Posts</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="blogeditor.html" class="btn btn-primary">New Post</a>
+            </div>
+        </div>
+        <!-- End Filter Dropdown and New Post Button -->
+
+        
+        <!-- blogs list-->
+        <section id="post-blog-list">
+          <div class="row-like-container d-flex align-items-start justify-content-between mb-3 boder-1 rounded-3">
+              <div class="d-flex flex-column">
+                <span class="Post-blog-title fw-bolder">Chris Brown Stupidity</span>
+                <span class="post-author text-muted">by cking - 24 January 2024 </span>
+                <span class="post-status text-muted">Published</span>
+              </div> 
+              <button class="btn btn-outline-secondary align-self-center"><i class="bi bi-bar-chart"></i></button>
+          </div>
+          
+          <div class="row-like-container d-flex align-items-start justify-content-between mb-3 boder-1 rounded-3">
+              <div class="d-flex flex-column">
+                <span class="Post-blog-title fw-bolder">Katt Williams Stupidity</span>
+                <span class="post-author text-muted">by cking - 24 January 2024 </span>
+                <span class="post-status text-muted">Published</span>
+              </div>
+              <button class="btn btn-outline-secondary align-self-center"><i class="bi bi-bar-chart"></i></button>
+          </div>
+      </section>
+          
+        <!-- End Recent list -->
+          
+          
+          
+          
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

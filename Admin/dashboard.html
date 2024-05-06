@@ -7,6 +7,41 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      // Check if the user is logged in
+        checkLoggedIn();
+      });
+
+    function checkLoggedIn() {
+        // Check if the "loggedIn" cookie exists
+        const loggedInCookie = getCookie("auth_token");
+
+        if (loggedInCookie) {
+            // User is logged in
+            const userInfo = JSON.parse(loggedInCookie);
+            const userInfoText = `Logged in as ${userInfo.email} (ID: ${userInfo.id})`;
+            // document.getElementById("userInfo").textContent = userInfoText;
+            console.log(userInfoText)
+        } else {
+            // User is not logged in, redirect to login page
+            window.location.href = "login.html";
+        }
+    }
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+            const [cookieName, cookieValue] = cookie.split('=');
+            if (cookieName.trim() === name) {
+                return decodeURIComponent(cookieValue);
+            }
+        }
+        return null;
+    }
+
+  </script>
 </head>
 <body>
   <div class="container-fluid mt-4">
@@ -17,12 +52,12 @@
           <div class="sidebar-header">
             Factual Ideas
           </div>
-          <div></div>
-          <a href="#" class="list-group-item list-group-item-action "> <i class="bi bi-browser-chrome"></i> &nbsp; View Site  </a>
-          <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-pencil-square"></i> &nbsp; Posts <span class="add-post">+</span></a>
+          <a href="dashboard.html" class="list-group-item list-group-item-action  active"> <i class="bi bi-house"></i> &nbsp; Dashboard  </a>
+          <a href="/index.html" class="list-group-item list-group-item-action "> <i class="bi bi-browser-chrome"></i> &nbsp; View Site  </a>
+          <a href="posts.html" class="list-group-item list-group-item-action"><i class="bi bi-pencil-square"></i> &nbsp; Posts <span class="add-post" onclick="addblog()">+</span></a>
           <a href="#" class="list-group-item list-group-item-action">Published</a>
           <a href="#" class="list-group-item list-group-item-action"><i class="bi bi-people"></i>&nbsp;Members <span class="more-info">10</span></a></a>
-          <a href="#" class="list-group-item list-group-item-action"> <i class="bi bi-box-arrow-right"></i>&nbsp;Logout</a>
+          <button class="list-group-item list-group-item-action logout" > <i class="bi bi-box-arrow-right"></i>&nbsp;Logout</button>
         </div>
       </div>
       
@@ -39,7 +74,7 @@
                   <h2 class="mb-4">Recent Posts</h2>
                 </div>
                 <div>
-                  <a href="#" class="text-success" style="text-decoration: none;">View All &nbsp; <i class="bi bi-arrow-bar-right"></i></a>
+                  <a href="posts.html" class="text-success" style="text-decoration: none;">View All &nbsp; <i class="bi bi-arrow-bar-right"></i></a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -98,11 +133,18 @@
     </div>
   </div>
 
+  <!-- <script>
+    function addblog(){
+      window.location.href = "blogeditor.html";
+    }
+  </script> -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script src="js/scripts.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

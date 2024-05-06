@@ -85,3 +85,64 @@ body {
   color: #fff;
 }
 
+/* Post page */
+.row-like-container {
+  background-color: #161a20;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+}
+
+.row-like-container:hover {
+  background-color: #1d1f23;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.row-like-container .Post-blog-title {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.row-like-container:hover .Post-blog-title {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.row-like-container .btn-outline-secondary {
+  color: #fff;
+}
+
+.row-like-container .btn-outline-secondary:hover {
+  color: #fff;
+}
+
+.row-like-container .btn-outline-secondary:hover i {
+  transform: scale(1.2);
+}
+
+/* Editot page */
+/* Style for the editor container and preview container */
+/* Style for the editor container and preview container */
+.editor-content, .preview-content {
+  height: 100vh;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Style for the CKEditor content */
+.cke {
+  height: 100%;
+  width: 100%;
+}
+.preview-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh !important;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Optional: Add margin for spacing */
+}

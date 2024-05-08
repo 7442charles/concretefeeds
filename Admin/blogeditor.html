@@ -21,6 +21,7 @@
                 <div id="preview-container" class="preview-content">
                     <div class="preview-header">
                         <h3>Blog Preview</h3>
+                        <a href="dashboard.html" class="btn btn-info">Back to Dashboard</a>
                         <button class="btn btn-success" id="publishButton">Publish</button>
                     </div>
                     <div id="preview-content"></div>
@@ -36,37 +37,106 @@
             width: '100%',
             // autoGrow_maxHeight: Infinity
         });
-    
-        // Get the CKEditor instance
-        const editor = CKEDITOR.instances.editor;
-    
+
+        // Function to save content to local storage
+        function saveEditorContent() {
+            const editorContent = CKEDITOR.instances.editor.getData();
+            localStorage.setItem('editorContent', editorContent);
+        }
+
+        // Load content from local storage if available
+        const storedContent = localStorage.getItem('editorContent');
+        if (storedContent) {
+            CKEDITOR.instances.editor.setData(storedContent);
+        }
+
         // Update the preview in real-time
+        const editor = CKEDITOR.instances.editor;
         editor.on('change', () => {
-          const previewContent = document.getElementById('preview-content');
-          previewContent.innerHTML = editor.getData();
+            const previewContent = document.getElementById('preview-content');
+            previewContent.innerHTML = editor.getData();
+            saveEditorContent(); // Save content to local storage on change
         });
 
         // Publish Button Click Event
-        CKEDITOR.on('instanceReady', function (event) {
-            var editor = event.editor;
+        document.getElementById('publishButton').addEventListener('click', function () {
+            // Get the editor content
+            var editorContent = editor.getData();
 
-            // Publish Button Click Event
-            document.getElementById('publishButton').addEventListener('click', function () {
-                // Get the editor content
-                var editorContent = editor.getData();
+            // Check if the editor content is empty
+            if (editorContent.trim() === '') {
+                alert('Error: Blog content cannot be empty. Please add content before publishing.');
+                return; // Exit the function if content is empty
+            }
 
-                // Check if the editor content is empty
-                if (editorContent.trim() === '') {
-                    alert('Error: Blog content cannot be empty. Please add content before publishing.');
-                    return; // Exit the function if content is empty
+            // Get the user ID from the "auth_token" cookie
+            var authCookie = getCookie('auth_token');
+            var userId = null;
+
+            if (authCookie) {
+                try {
+                    var userData = JSON.parse(authCookie);
+                    userId = userData.id;
+                } catch (error) {
+                    console.error('Error parsing user data from cookie:', error);
                 }
-                
-                // Send the content to the backend for storage (replace this with your backend logic)
-                console.log('Content to be published:', editorContent);
-                alert('Content published successfully!'); // Display a success message
+            }
+
+            // Check if the user ID is available
+            if (!userId) {
+                alert('Error: User ID not found. Please login again.');
+                // Redirect the user to the login page or perform other actions as needed
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // Construct the request body with user ID and content
+            var requestBody = JSON.stringify({ userId: userId, content: editorContent });
+            console.log(requestBody);
+
+            // Send the content to the backend for storage
+            fetch('http://localhost:3000/saveblog', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: requestBody
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Clear editor content after successful publish
+                    editor.setData('');
+                    localStorage.removeItem('editorContent'); // Remove content from local storage
+                    return response.json(); // Parse the JSON response from the server
+                } else {
+                    throw new Error('Error: Failed to save blog content.');
+                }
+            })
+            .then(data => {
+                // Handle the success message from the backend
+                console.log(data.message); // Log the success message
+                alert(data.message); // Display the success message to the user
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error: Failed to save blog content. Please try again.');
             });
         });
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [cookieName, cookieValue] = cookie.split('=');
+                if (cookieName.trim() === name) {
+                    return decodeURIComponent(cookieValue);
+                }
+            }
+            return null;
+        }
     </script>
+
+    
     
    
 

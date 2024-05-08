@@ -31,6 +31,7 @@ const createTables = () => {
             user_id INTEGER,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            views INTEGER DEFAULT 0,
             FOREIGN KEY (user_id) REFERENCES Users(id)
         );
     `;

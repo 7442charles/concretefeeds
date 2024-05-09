@@ -6,6 +6,7 @@
     <title>Factual Ideas - Admin Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script> -->
     <link rel="stylesheet" href="css/styles.css">
     <script src="ckeditor/ckeditor.js"></script>
 </head>
@@ -30,11 +31,22 @@
         </div>
     </div>
     
+    <!-- <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script> -->
 
     <script>
         CKEDITOR.replace('editor', {
             height: '100vh',
             width: '100%',
+            extraPlugins: 'uploadimage',
+            uploadUrl: 'http://localhost:3000/uploadImage',
+            filebrowserUploadUrl: 'http://localhost:3000/uploadImage',
+            filebrowserUploadMethod: 'form',
             // autoGrow_maxHeight: Infinity
         });
 

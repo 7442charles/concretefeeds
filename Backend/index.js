@@ -8,6 +8,7 @@ const loginRoute = require('./routes/login');
 const saveblogRoute = require('./routes/saveblog');
 const postsRoute = require('./routes/posts');
 const trendingRoute = require('./routes/trending')
+const uploadImageRoute = require('./routes/imagesupload')
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use('/login', loginRoute);
 app.use('/saveblog', saveblogRoute);
 app.use('/posts', postsRoute);
 app.use('/trendingposts', trendingRoute)
+app.use('/uploadImage', uploadImageRoute)
 
 // Create tables if they don't exist
 createTables();

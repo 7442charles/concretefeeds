@@ -32,13 +32,20 @@ const createTables = () => {
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             views INTEGER DEFAULT 0,
+            mainImage TEXT DEFAULT '', 
             FOREIGN KEY (user_id) REFERENCES Users(id)
         );
     `;
 
+    // const alterBlogsTable = `
+    //     ALTER TABLE Blogs
+    //     ADD COLUMN mainImage TEXT DEFAULT '';
+    // `;
+
     db.serialize(() => {
         db.run(createUsersTable);
         db.run(createBlogsTable);
+        // db.run(alterBlogsTable);  
     });
 };
 

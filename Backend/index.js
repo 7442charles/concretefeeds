@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const cors = require('cors');
 const { db, createTables } = require('./config/database'); 
 const {updateBlogViews, resetBlogViews} = require('./routes/updateBlogsview')
@@ -16,6 +17,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json({ limit: '10mb' })); // Parse JSON bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Uncomment this line if using x-www-form-urlencoded
+
+// Serve static files from the 'data' directory
+app.use('/data', express.static(path.join(__dirname, 'data')));
 
 // Routes
 app.use('/newuser', newuserRoute);

@@ -47,7 +47,10 @@ router.post('/', (req, res, next) => {
         const error = new Error('No file selected!');
         next(error);
       } else {
-        res.status(200).json({ message: 'File uploaded successfully!', file: req.file });
+        // Send the image URL back to CKEditor
+        const imageUrl = `http:localhost:3000/data/blogImages/${req.file.filename}`;
+        console.log(imageUrl)
+        res.status(200).json({ url: imageUrl });
       }
     }
   });

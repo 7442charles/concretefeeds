@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
     const selectPostsQuery = `
         SELECT Blogs.id AS blogid, Users.username, Blogs.title AS blog_title, Blogs.created_at AS date_posted
         FROM Blogs
-        INNER JOIN Users ON Blogs.user_id = Users.id;
+        INNER JOIN Users ON Blogs.user_id = Users.id
+        ORDER BY Blogs.created_at DESC; // Sort by most recent first
     `;
 
     db.all(selectPostsQuery, (err, posts) => {

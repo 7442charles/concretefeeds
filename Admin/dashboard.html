@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="table-responsive">
-              <table class="table table-dark  table-hover custom-table">
+              <table id="recentposts-table" class="table table-dark  table-hover custom-table">
                 <thead>
                   <tr>
                     <th scope="col">Blog Title</th>
@@ -88,7 +88,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <!-- <tr>
                     <td>Cool Tech Gadgets for 2024</td>
                     <td>100</td>
                     <td>January 1, 2024</td>
@@ -117,7 +117,7 @@
                     <td>200</td>
                     <td>January 5, 2024</td>
                     <td></td>
-                  </tr>
+                  </tr> -->
                 </tbody>
                 
               </table>
@@ -133,11 +133,25 @@
     </div>
   </div>
 
-  <!-- <script>
-    function addblog(){
-      window.location.href = "blogeditor.html";
-    }
-  </script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('http://localhost:3000/recentposts')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(post => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${post.title}</td>
+                        <td>${post.views}</td>
+                        <td>${post.dateposted}</td>
+                        <td></td>
+                    `;
+                    document.getElementById('recentposts-table').querySelector('tbody').appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
+    </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

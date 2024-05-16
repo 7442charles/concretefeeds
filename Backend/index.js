@@ -10,6 +10,7 @@ const saveblogRoute = require('./routes/saveblog');
 const postsRoute = require('./routes/posts');
 const trendingRoute = require('./routes/trending')
 const uploadImageRoute = require('./routes/imagesupload')
+const recentPostsRoute = require('./routes/recent_posts')
 
 const app = express();
 
@@ -28,11 +29,16 @@ app.use('/saveblog', saveblogRoute);
 app.use('/posts', postsRoute);
 app.use('/trendingposts', trendingRoute)
 app.use('/uploadImage', uploadImageRoute)
+app.use('/recentPosts', recentPostsRoute)
 
 // Create tables if they don't exist
 createTables();
 // updateBlogViews()
 // resetBlogViews()
+
+app.get( '/', (req, res) =>{
+    res.send(`app is live at port ${PORT}`)
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

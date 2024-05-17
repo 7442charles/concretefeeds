@@ -11,6 +11,8 @@ const postsRoute = require('./routes/posts');
 const trendingRoute = require('./routes/trending')
 const uploadImageRoute = require('./routes/imagesupload')
 const recentPostsRoute = require('./routes/recent_posts')
+const mainBlogRoute = require('./routes/mainpost')
+const sixBlogsRoute = require('./routes/sixblogs')
 
 const app = express();
 
@@ -30,6 +32,8 @@ app.use('/posts', postsRoute);
 app.use('/trendingposts', trendingRoute)
 app.use('/uploadImage', uploadImageRoute)
 app.use('/recentPosts', recentPostsRoute)
+app.use('/mainblog', mainBlogRoute )
+app.use('/sixblogs', sixBlogsRoute)
 
 // Create tables if they don't exist
 createTables();

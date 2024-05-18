@@ -1,5 +1,5 @@
 // Fetch data from the API endpoint
-fetch('http://localhost:3000/trendingposts')
+fetch(`${URL}/trendingposts`)
     .then(response => response.json())
     .then(data => {
         // Get the container where the trending posts will be added

@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const moment = require('moment-timezone');
 const { db } = require('../config/database');
 
 // Route to handle receiving time spent data
 router.post('/', (req, res) => {
     const { timeSpent } = req.body;
-    const date = new Date().toISOString().split('T')[0]; // Get the current date in YYYY-MM-DD format
+    const date = moment().tz('Africa/Nairobi').format('YYYY-MM-DD'); // Set the timezone to Nairobi
 
     // Log the received time spent data
     console.log('Time spent data received:', timeSpent);

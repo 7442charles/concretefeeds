@@ -7,41 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script>
-      document.addEventListener("DOMContentLoaded", function() {
-      // Check if the user is logged in
-        checkLoggedIn();
-      });
-
-    function checkLoggedIn() {
-        // Check if the "loggedIn" cookie exists
-        const loggedInCookie = getCookie("auth_token");
-
-        if (loggedInCookie) {
-            // User is logged in
-            const userInfo = JSON.parse(loggedInCookie);
-            const userInfoText = `Logged in as ${userInfo.email} (ID: ${userInfo.id})`;
-            // document.getElementById("userInfo").textContent = userInfoText;
-            console.log(userInfoText)
-        } else {
-            // User is not logged in, redirect to login page
-            window.location.href = "login.html";
-        }
-    }
-
-    // Function to get a cookie by name
-    function getCookie(name) {
-        const cookies = document.cookie.split(';');
-        for (let cookie of cookies) {
-            const [cookieName, cookieValue] = cookie.split('=');
-            if (cookieName.trim() === name) {
-                return decodeURIComponent(cookieValue);
-            }
-        }
-        return null;
-    }
-
-  </script>
+  <script src="js/url.js"></script>
+  <script src="js/checklogin.js"></script>
 </head>
 <body>
   <div class="container-fluid mt-4">
@@ -135,7 +102,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('http://localhost:3000/recentposts')
+        fetch(`${URL}/recentposts`)
             .then(response => response.json())
             .then(data => {
                 data.forEach(post => {
@@ -158,7 +125,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/charts.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

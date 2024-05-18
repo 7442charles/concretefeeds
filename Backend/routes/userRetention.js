@@ -5,7 +5,7 @@ const { db } = require('../config/database');
 // Route to get total user retention per day
 router.get('/', (req, res) => {
     const getRetentionQuery = `
-        SELECT * FROM Retention ORDER BY date DESC;
+        SELECT * FROM Retention ORDER BY date DESC LIMIT 5;
     `;
 
     db.all(getRetentionQuery, (err, rows) => {

@@ -30,6 +30,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <script src="assets/js/time.js"></script>
+  <script src="assets/js/url.js"></script>
 </head>
 
 <body>
@@ -338,7 +339,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-    fetch('http://localhost:3000/mainblog')
+    fetch(`${URL}/mainblog`)
         .then(response => response.json())
         .then(data => {
             const blog = data; // Assuming data is directly the blog object
@@ -366,7 +367,7 @@
     
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-          fetch('http://localhost:3000/sixblogs')
+          fetch(`${URL}/sixblogs`)
               .then(response => response.json())
               .then(posts => {
                   const column1 = document.getElementById('column-1');
@@ -408,7 +409,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/trending.js"></script>
-
+  
 </body>
 
 </html>

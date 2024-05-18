@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Send time spent to the server
     function sendTimeSpent(timeSpentSeconds) {
-        fetch('http://localhost:3000/timespent', {
+        fetch(`${URL}/timespent`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

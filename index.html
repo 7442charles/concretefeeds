@@ -29,6 +29,7 @@
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="assets/js/time.js"></script>
 </head>
 
 <body>
@@ -139,14 +140,14 @@
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
           <div class="col-lg-4">
-            <div class="post-entry-1 lg">
+            <div class="post-entry-1 lg" id="blog-entry">
               <a href="#"><img src="" id="blog-image" alt="" class="img-fluid"></a>
               <div class="post-meta"><span class="mx-1">&bullet;</span> <span id="blog-date"></span></div>
-              <h2 id="blog-title"><a href="single-post.html"></a></h2>
+              <h2 id="blog-title"></h2>
               <!-- <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p> -->
 
               <div class="d-flex align-items-center author">
-                <div class="photo"><img src="assets/img/person-1.jpg" alt="" class="img-fluid"></div>
+                <div class="photo"><img src="assets/img/author.jpg" alt="" class="img-fluid"></div>
                 <div class="name">
                   <h3 class="m-0 p-0" id="author-name"></h3>
                 </div>
@@ -337,23 +338,30 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('http://localhost:3000/mainblog')
-            .then(response => response.json())
-            .then(data => {
-                const blog = data; // Assuming data is directly the blog object
-                document.getElementById('blog-image').src = blog.mainImage;
-                document.getElementById('blog-date').textContent = formatDate(blog.date_posted);
-                document.getElementById('blog-title').innerHTML = `<a href="single-post.html">${blog.title}</a>`;
-                document.getElementById('author-name').textContent = blog.author;
-            })
-            .catch(error => console.error('Error fetching data:', error));
+    fetch('http://localhost:3000/mainblog')
+        .then(response => response.json())
+        .then(data => {
+            const blog = data; // Assuming data is directly the blog object
+            const blogEntry = document.getElementById('blog-entry');
+
+            // Update blog entry data
+            blogEntry.dataset.blogid = blog.blogid;
+            document.getElementById('blog-image').src = blog.mainImage;
+            document.getElementById('blog-date').textContent = formatDate(blog.date_posted);
+            document.getElementById('blog-title').innerHTML = `<a href="single-post.html">${blog.title}</a>`;
+            document.getElementById('author-name').textContent = blog.author;
+
+            console.log(blog.blogid); // For debugging
+        })
+        .catch(error => console.error('Error fetching data:', error));
     });
-    
+
     // Function to format date (optional)
     function formatDate(dateString) {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
+
   </script>
     
     <script>
@@ -372,6 +380,7 @@
                           <div class="post-meta"><span class="date">${formatDate(post.date_posted)}</span> <span class="mx-1">&bullet;</span> <span>${post.title}</span></div>
                           <h2><a href="single-post.html">${post.title}</a></h2>
                       `;
+                      
                       if (index % 2 === 0) {
                           column1.appendChild(postEntry);
                       } else {

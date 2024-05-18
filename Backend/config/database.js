@@ -37,15 +37,17 @@ const createTables = () => {
         );
     `;
 
-    // const alterBlogsTable = `
-    //     ALTER TABLE Blogs
-    //     ADD COLUMN mainImage TEXT DEFAULT '';
-    // `;
+    const createRetentionTable = `
+        CREATE TABLE IF NOT EXISTS Retention (
+            date TEXT PRIMARY KEY,
+            total_minutes INTEGER DEFAULT 0
+        );
+    `;
 
     db.serialize(() => {
         db.run(createUsersTable);
         db.run(createBlogsTable);
-        // db.run(alterBlogsTable);  
+        db.run(createRetentionTable);
     });
 };
 

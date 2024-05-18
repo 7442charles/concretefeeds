@@ -126,7 +126,7 @@ body {
 .editor-content, .preview-content {
   height: 100vh;
   padding: 20px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 /* Style for the CKEditor content */

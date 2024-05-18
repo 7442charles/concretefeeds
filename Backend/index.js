@@ -13,13 +13,15 @@ const uploadImageRoute = require('./routes/imagesupload')
 const recentPostsRoute = require('./routes/recent_posts')
 const mainBlogRoute = require('./routes/mainpost')
 const sixBlogsRoute = require('./routes/sixblogs')
+const timeSpentRoute = require('./routes/times')
+const userRetentionRoute = require('./routes/userRetention')
 
 const app = express();
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json({ limit: '10mb' })); // Parse JSON bodies
-app.use(bodyParser.urlencoded({ extended: true })); // Uncomment this line if using x-www-form-urlencoded
+app.use(bodyParser.json({ limit: '10mb' })); 
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 // Serve static files from the 'data' directory
 app.use('/data', express.static(path.join(__dirname, 'data')));
@@ -34,6 +36,9 @@ app.use('/uploadImage', uploadImageRoute)
 app.use('/recentPosts', recentPostsRoute)
 app.use('/mainblog', mainBlogRoute )
 app.use('/sixblogs', sixBlogsRoute)
+app.use('/timespent', timeSpentRoute)
+app.use('/userretention', userRetentionRoute)
+
 
 // Create tables if they don't exist
 createTables();

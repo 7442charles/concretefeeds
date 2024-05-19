@@ -15,8 +15,11 @@ const mainBlogRoute = require('./routes/mainpost')
 const sixBlogsRoute = require('./routes/sixblogs')
 const timeSpentRoute = require('./routes/times')
 const userRetentionRoute = require('./routes/userRetention')
+const blogRouter = require('./routes/blog');
 
 const app = express();
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Middleware
 app.use(cors());
@@ -25,6 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from the 'data' directory
 app.use('/data', express.static(path.join(__dirname, 'data')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/newuser', newuserRoute);
@@ -38,6 +42,8 @@ app.use('/mainblog', mainBlogRoute )
 app.use('/sixblogs', sixBlogsRoute)
 app.use('/timespent', timeSpentRoute)
 app.use('/userretention', userRetentionRoute)
+
+app.use(blogRouter);
 
 
 // Create tables if they don't exist

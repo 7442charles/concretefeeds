@@ -349,7 +349,7 @@
             blogEntry.dataset.blogid = blog.blogid;
             document.getElementById('blog-image').src = blog.mainImage;
             document.getElementById('blog-date').textContent = formatDate(blog.date_posted);
-            document.getElementById('blog-title').innerHTML = `<a href="single-post.html">${blog.title}</a>`;
+            document.getElementById('blog-title').innerHTML = `<a href="${URL}/blog/${blog.blogid}">${blog.title}</a>`;
             document.getElementById('author-name').textContent = blog.author;
 
             console.log(blog.blogid); // For debugging
@@ -362,6 +362,7 @@
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
+
 
   </script>
     

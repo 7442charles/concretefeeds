@@ -1,5 +1,5 @@
 // Fetch data from the API endpoint
-fetch('http://localhost:3000/posts')
+fetch(`${URL}/posts`)
     .then(response => response.json())
     .then(data => {
         // Get the container where the blog rows will be added
@@ -36,6 +36,13 @@ fetch('http://localhost:3000/posts')
             const button = document.createElement('button');
             button.classList.add('btn', 'btn-outline-secondary', 'align-self-center');
             button.innerHTML = '<i class="bi bi-bar-chart"></i>';
+            
+            // Attach blogid to the button
+            button.dataset.blogid = blog.blogid;
+            // console.log(blog.blogid);
+
+            // Add click event listener to the button
+            button.addEventListener('click', handleDeleteButtonClick);
 
             blogRow.appendChild(button);
 
@@ -46,3 +53,25 @@ fetch('http://localhost:3000/posts')
     .catch(error => {
         console.error('Error fetching data:', error);
     });
+
+// Function to handle button click
+function handleDeleteButtonClick(event) {
+    const blogId = event.target.dataset.blogid;
+    console.log('Clicked Blog ID:', blogId); // Log the blog ID
+
+    Swal.fire({
+        title: "What changes do you want to make?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Edit",
+        denyButtonText: `Delete`
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire("Saved!", "", "success");
+        } else if (result.isDenied) {
+          Swal.fire("Changes are not saved", "", "info");
+        }
+      }
+    );
+}

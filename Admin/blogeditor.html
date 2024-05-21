@@ -11,6 +11,7 @@
     <script src="js/checklogin.js"></script>
     <script src="ckeditor/ckeditor.js"></script>
     <script src="js/url.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container-fluid py-4">
@@ -116,23 +117,29 @@
                 body: requestBody
             })
             .then(response => {
-                if (response.ok) {
-                    // Clear editor content after successful publish
-                    editor.setData('');
-                    localStorage.removeItem('editorContent'); // Remove content from local storage
+                if (response.status === 200) {
                     return response.json(); // Parse the JSON response from the server
                 } else {
                     throw new Error('Error: Failed to save blog content.');
                 }
             })
             .then(data => {
-                // Handle the success message from the backend
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Blog upload success",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 console.log(data.message); // Log the success message
-                alert(data.message); // Display the success message to the user
             })
             .catch(error => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                });
                 console.error('Error:', error);
-                alert('Error: Failed to save blog content. Please try again.');
             });
         });
 

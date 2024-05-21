@@ -9,7 +9,7 @@ router.post('/', (req, res) => {
     const date = moment().tz('Africa/Nairobi').format('YYYY-MM-DD'); // Set the timezone to Nairobi
 
     // Log the received time spent data
-    console.log('Time spent data received:', timeSpent);
+    // console.log('Time spent data received:', timeSpent);
 
     const insertOrUpdateQuery = `
         INSERT INTO Retention (date, total_minutes)

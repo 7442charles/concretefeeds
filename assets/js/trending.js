@@ -38,4 +38,5 @@ fetch(`${URL}/trendingposts`)
     })
     .catch(error => {
         console.error('Error fetching trending posts:', error);
-    });
+    }
+);

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Send login data to backend for validation
             const loginData = { email, password };
-            fetch("http://localhost:3000/login", {
+            fetch(`{URL}/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
